@@ -1,0 +1,14 @@
+# IntelliJ data
+*.iml
+.idea/
+.ipr
+.DS_Store
+
+# relational-db
+relational-db/target/
+
+# my-leetcode
+my-leetcode/target/
+
+# my-java-study
+my-java-study/target/
