@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit;
 public class MultiThreadWrite {
 
     public static void main(String[] args) throws Exception {
-        int from = 19500000;
-        int to = 19501000;
+        int from = 1;
+        int to = 500000;
 
         int threadNum = Runtime.getRuntime().availableProcessors() * 2;
         ExecutorService executor = Executors.newFixedThreadPool(threadNum);

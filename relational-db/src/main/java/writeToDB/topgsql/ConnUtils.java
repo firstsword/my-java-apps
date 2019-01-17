@@ -14,7 +14,7 @@ public class ConnUtils {
             dataSource.setDriverClass("org.postgresql.Driver"); //loads the jdbc driver
             dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
             dataSource.setUser("postgres");
-            dataSource.setPassword("password");
+            dataSource.setPassword("123456");
 
         } catch (Exception e) {
             System.out.println(e);

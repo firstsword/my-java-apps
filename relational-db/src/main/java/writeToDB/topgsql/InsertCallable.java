@@ -3,6 +3,7 @@ package writeToDB.topgsql;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.time.Instant;
 import java.util.concurrent.Callable;
 
 public class InsertCallable implements Callable<Long> {
@@ -34,8 +35,8 @@ public class InsertCallable implements Callable<Long> {
             stmt.setString(3, "t_text_" + i);
             stmt.setBoolean(4, true);
             stmt.setDouble(5, Double.valueOf(i + ".111"));
-            stmt.setInt(6, i);
-            stmt.setDate(7, new Date(2018, 6, 6));
+            stmt.setLong(6, Instant.now().getEpochSecond());
+            stmt.setDate(7, new Date(2018, 12, 27));
             stmt.setInt(8, i);
             stmt.setDouble(9, Double.valueOf(i + ".222"));
 

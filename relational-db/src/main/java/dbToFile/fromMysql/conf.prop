@@ -1,0 +1,11 @@
+dbUrl=jdbc:mysql://192.168.1.1:3306/dbtest
+dbUser=root
+dbPassword=root123
+sql_min=SELECT min(sid) FROM student
+min_value=1
+sql_max=SELECT max(sid) FROM student
+max_value=100
+query=SELECT * FROM student where sid > ? and sid <= ?
+step=3
+outpath=output
+separator=|
