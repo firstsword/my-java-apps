@@ -7,10 +7,13 @@ import java.util.concurrent.TimeUnit;
 public class MultiThreadWrite {
 
     public static void main(String[] args) throws Exception {
-        int from = 800000;
-        int to = 900000;
+        int from = 100001;
+        int to = 200000;
 
         int threadNum = Runtime.getRuntime().availableProcessors() * 2;
+
+        threadNum = 1;
+
         ExecutorService executor = Executors.newFixedThreadPool(threadNum);
 
         int step = (to - from + 1) / threadNum;

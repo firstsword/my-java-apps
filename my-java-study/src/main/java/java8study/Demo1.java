@@ -153,7 +153,11 @@ public class Demo1 {
     //UnaryOperator<T>	T	T	接收对象并返回同类型的对象
     @Test
     public void t8() {
-        UnaryOperator<Object> f = x -> new Object();
+        UnaryOperator<Object> f = x -> 100;
+
+        System.out.println(f.apply(1));
+        System.out.println(f.apply("test"));
+        System.out.println(f.apply(new Object()));
     }
 
     //BinaryOperator<T>	(T, T)	T	接收两个同类型的对象，并返回一个原类型对象

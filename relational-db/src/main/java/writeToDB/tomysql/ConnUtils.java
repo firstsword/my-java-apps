@@ -12,7 +12,7 @@ public class ConnUtils {
     static {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUsername("root");
-        dataSource.setPassword("Password");
+        dataSource.setPassword("MySQL@123");//root123
         dataSource.setUrl("jdbc:mysql://192.168.31.136:3306/wind?useServerPrepStmts=false&rewriteBatchedStatements=true");
         dataSource.setInitialSize(5);
         dataSource.setMinIdle(1);

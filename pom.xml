@@ -22,6 +22,8 @@
         <module>relational-db</module>
         <module>my-leetcode</module>
         <module>my-java-study</module>
+        <module>my-kafka</module>
+        <module>flink-study</module>
     </modules>
 
 

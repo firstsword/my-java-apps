@@ -2,6 +2,8 @@ package writeToDB.tomysql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.time.Instant;
+import java.util.Date;
 import java.util.concurrent.Callable;
 
 public class InsertCallable implements Callable<Long> {
@@ -21,7 +23,13 @@ public class InsertCallable implements Callable<Long> {
         Connection conn = ConnUtils.getConnection();
         conn.setAutoCommit(false);
 
-        String sql = "INSERT INTO student (sid,sname,sage) VALUES (?,?,?)";
+        String sql = "INSERT INTO testbinlog (t_id,t_name, t_timestamp) VALUES (?,?,?)";
+        //String sql = "INSERT INTO wind.student (sid, sname, sage) VALUES (?,?,?)";
+
+        //String sql = "UPDATE testbinlog SET t_name = 'bbb' WHERE t_id = ?";
+        //String sql = "DELETE FROM testbinlog WHERE t_id = ?";
+
+
         PreparedStatement stmt = conn.prepareStatement(sql);
 
         int count = 0;
@@ -30,7 +38,7 @@ public class InsertCallable implements Callable<Long> {
         for (int i = start; i <= end; i++) {
             stmt.setInt(1, i);
             stmt.setString(2, "wind" + i);
-            stmt.setInt(3, 20);
+            stmt.setLong(3, System.currentTimeMillis());
 
             stmt.addBatch();
             count++;
